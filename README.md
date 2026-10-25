@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Cryptographically secure password generation
+OPass is a command-line password and passphrase generator built on cryptographically secure randomness. It produces passwords, word-based passphrases and numeric PINs, and can score the strength of an existing password.
 
 ---
 
 ## ✨ Features
 
-- Cryptographically secure password and passphrase generator with strength scoring
+- Cryptographically secure password generation with configurable length
+- Word-based passphrase generation with a customizable word count and separator
+- Numeric PIN generation of a chosen length
+- Strength scoring of a supplied password
+- Batch generation of multiple values in a single run
+- Optional exclusion of symbols from generated passwords
 
 ---
 
@@ -38,7 +43,11 @@ Cryptographically secure password generation
 ## 🚀 Usage
 
 ```bash
-./OPass
+./OPass --gen -l 20 -n 5
+./OPass --passphrase -w 5 --sep -
+./OPass --pin -l 6
+./OPass --check 'P@ssw0rd'
+./OPass --help
 ```
 
 ---
